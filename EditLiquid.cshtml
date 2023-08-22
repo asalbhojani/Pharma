@@ -1,0 +1,57 @@
+﻿
+@{
+}
+@{
+    Layout = "_Layout";
+}
+
+@model LiquidFilling
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Liquid Fill</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        
+                       
+                        <input type="hidden" asp-for="@Model.LiquidFillingId" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Machine Name</label>
+                        <input type="text" class="form-control" name="machinename" value="@Model.machinename">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Image</label>
+                        <input type="file" class="form-control" name="liquidImage" value="@Model.liquidImage">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Air Pressure</label>
+                        <input type="text" class="form-control" name="airpressure" value="@Model.airpressure">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Air Volume</label>
+                        <input type="text" class="form-control" name="airvolume" value="@Model.airvolume">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Filling Speed</label>
+                        <input type="text" class="form-control" name="fillingspeed" value="@Model.fillingspeed">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Filling Range</label>
+                        <input type="text" class="form-control" name="fillingrange" value="@Model.fillingrange">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

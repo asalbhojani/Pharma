@@ -1,0 +1,216 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@*@model IEnumerable<Contact>*@
+<div class="container-fluid">
+    <!--  Row 1 -->
+
+    <div class="row">
+        <div class="col-lg-8 d-flex align-items-strech">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+
+
+                        <div class="col-lg-12 d-flex align-items-stretch">
+                            <div class="card w-100">
+                                <div class="card-body p-4">
+                                    <div class="mb-4">
+                                        <h5 class="card-title fw-semibold">Feedbacks</h5>
+                                    </div>
+
+                                    <table class="table text mb-0 align-middle">
+
+                                        <thead class="text-dark fs-4">
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Name</h6>
+                                                </th>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Feedback</h6>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        @foreach (var c in ViewBag.contact)
+                                        {
+                                            <tbody>
+                                                <tr>
+
+                                                    <td class="border-bottom-1">
+                                                        <h6 class="fw-semibold mb-1">@c.FullName</h6>
+                                                        <span class="fw-normal"></span>
+                                                    </td>
+
+                                                    <td class="border-bottom-0">
+                                                        <h6 class="fw-semibold mb-0 fs-4">@c.Feedback</h6>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id=""></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-4">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <!-- Feedback -->
+                    <div class="card overflow-hidden">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-9 fw-semibold">Total Feedbacks</h5>
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h4 class="fw-semibold mb-3">
+                                        @ViewBag.feedbacks
+                                    </h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                                            <i class="ti ti-arrow-up-left text-success"></i>
+                                        </span>
+                                        <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                                        <p class="fs-3 mb-0">last year</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- cv -->
+                    <div class="card overflow-hidden">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-9 fw-semibold">Total CV Received</h5>
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h4 class="fw-semibold mb-3">
+                                        @ViewBag.UserRegister
+                                    </h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                                            <i class="ti ti-arrow-up-left text-success"></i>
+                                        </span>
+                                        <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                                        <p class="fs-3 mb-0">last year</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Products -->
+                    <div class="card overflow-hidden">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-9 fw-semibold">Total Products</h5>
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h4 class="fw-semibold mb-3">
+                                        @ViewBag.TProducts
+                                    </h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                                            <i class="ti ti-arrow-up-left text-success"></i>
+                                        </span>
+                                        <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                                        <p class="fs-3 mb-0">last year</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-8 d-flex align-items-strech">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+
+                        <div class="col-lg-12 d-flex align-items-stretch">
+                            <div class="card w-100">
+                                <div class="card-body p-4">
+                                    <div class="mb-4">
+                                        <h5 class="card-title fw-semibold">Quote From Companies</h5>
+
+                                    <table class="table text mb-0 align-middle">
+
+                                        <thead class="text-dark fs-4">
+                                            <tr>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Name</h6>
+                                                </th>
+                                                <th class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-0">Comments</h6>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                           
+                                            @foreach (var q in ViewBag.quote)
+                                        {
+                                            <tbody>
+                                                <tr>
+
+                                                    <td class="border-bottom-1">
+                                                        <h6 class="fw-semibold mb-1">@q.FullName</h6>
+                                                        <span class="fw-normal"></span>
+                                                    </td>
+
+                                                    <td class="border-bottom-0">
+                                                            <h6 class="fw-semibold mb-0 fs-4">@q.Comments</h6>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id=""></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+

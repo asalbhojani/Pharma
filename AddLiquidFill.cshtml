@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    Layout = "_Layout";
+}
+
+@model LiquidFilling
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Add Liquid Filling</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                     <div class="mb-3">
+                        <label asp-for="machinename" class="form-label"></label>
+                        <input type="text" asp-for="machinename" class="form-control">
+                        <span asp-validation-for="machinename"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="airpressure" class="form-label"></label>
+                        <input type="text" asp-for="airpressure" class="form-control">
+                        <span asp-validation-for="airpressure"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="airvolume" class="form-label"></label>
+                        <input type="text" asp-for="airvolume" class="form-control">
+                        <span asp-validation-for="airvolume"></span>
+                    </div>
+
+                   <div class="mb-3">
+                        <label asp-for="fillingspeed" class="form-label"></label>
+                        <input type="text" asp-for="fillingspeed" class="form-control">
+                        <span asp-validation-for="fillingspeed"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="fillingrange" class="form-label"></label>
+                        <input type="text" asp-for="fillingrange" class="form-control">
+                        <span asp-validation-for="fillingrange"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="liquidImage" class="form-label"></label>
+                        <input type="file" asp-for="liquidImage" class="form-control">
+                        <span asp-validation-for="liquidImage"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Liquid Filling</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

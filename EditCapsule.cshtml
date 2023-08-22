@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "_Layout";
+}
+
+@model Capsule
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Edit Capsule</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        
+                      
+                        <input type="hidden" asp-for="@Model.Capsuleid" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Machine Name</label>
+                        <input type="text" class="form-control" name="machinename" value="@Model.machinename">
+                    </div>
+
+
+                      <div class="mb-3">
+                        <label class="form-label">Output</label>
+                        <input type="text" class="form-control" name="Output" value="@Model.Output">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Capsule Size</label>
+                        <input type="text" class="form-control" name="capsulesize" value="@Model.capsulesize">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Machine Dimension</label>
+                        <input type="text" class="form-control" name="machinedimenssion" value="@Model.machinedimenssion">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Weight</label>
+                        <input type="text" class="form-control" name="shippingweight" value="@Model.shippingweight">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

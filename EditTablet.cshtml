@@ -1,0 +1,83 @@
+﻿    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+@{
+}
+@{
+    Layout = "_Layout";
+}
+
+@model Tablet
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Tablet</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                       
+                
+                         <input type="hidden" sp-for="@Model.TabletId" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Machine Name</label>
+                        <input type="text" class="form-control" name="machinename" value="@Model.machinename">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Image</label>
+                        <input type="file" class="form-control" name="TabletImage" value="@Model.TabletImage">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Model Number</label>
+                        <input type="text" class="form-control" name="modelnumber" value="@Model.modelnumber">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Dice</label>
+                        <input type="text" class="form-control" name="dice" value="@Model.dice">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Max Pressure</label>
+                        <input type="text" class="form-control" name="maxpressure" value="@Model.maxpressure">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Max Diameter of Tablet</label>
+                        <input type="text" class="form-control" name="maxdiameteroftablet" value="@Model.maxdiameteroftablet">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Max Depth of Fill</label>
+                        <input type="text" class="form-control" name="Maxdepthoffill" value="@Model.Maxdepthoffill">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Production Capacity</label>
+                        <input type="text" class="form-control" name="productioncapacity" value="@Model.productioncapacity">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Machine Size</label>
+                        <input type="text" class="form-control" name="machinesize" value="@Model.machinesize">
+                    </div>
+
+                     <div class="mb-3">
+                        <label class="form-label">Machine Weight</label>
+                        <input type="text" class="form-control" name="machineweight" value="@Model.machineweight">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Net Weight</label>
+                        <input type="text" class="form-control" name="NetWeight" value="@Model.NetWeight">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

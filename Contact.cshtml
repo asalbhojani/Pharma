@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "_Layout";
+} 
+
+@model IEnumerable<Contact>
+<div class="col-lg-12 d-flex align-items-stretch">
+    <div class="card w-100">
+        <div class="card-body p-4">
+            <h5 class="card-title fw-semibold mb-4">User Feedback</h5>
+            <div class="table-responsive">
+                <table class="table text-nowrap mb-0 align-middle">
+                   
+                    <thead class="text-dark fs-4">
+                        <tr> 
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Id</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Name</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Email</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Feedback</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Action</h6>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    @foreach(Contact c in Model)
+                    {
+                        <tbody>
+                            <tr>
+                                <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@c.Id</h6></td>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-1">@c.FullName</h6>
+                                    <span class="fw-normal"></span>
+                                </td>
+
+                                <td class="border-bottom-0">
+                                    <p class="mb-0 fw-normal">@c.Email</p>
+                                </td>
+
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0 fs-4">@c.Feedback</h6>
+                                </td>
+
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a asp-action="EditContact" asp-route-id="@c.Id">
+                                            <span class="badge bg-primary rounded-3 fw-semibold">Edit</span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="mailto:
+                                                    @c.Email">
+                                            <span class="badge bg-primary rounded-3 fw-semibold">E-Mail</span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    }
+                   
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+       

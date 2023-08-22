@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = "_Layout";
+}
+@model Capsule
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Add Capsule</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label asp-for="machinename" class="form-label"></label>
+                        <input type="text" asp-for="machinename" class="form-control">
+                        <span asp-validation-for="machinename"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Output" class="form-label"></label>
+                        <input type="text" asp-for="Output" class="form-control">
+                        <span asp-validation-for="Output"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="capsulesize" class="form-label"></label>
+                        <input type="text" asp-for="capsulesize" class="form-control">
+                        <span asp-validation-for="capsulesize"></span>
+                    </div>
+
+                   <div class="mb-3">
+                        <label asp-for="machinedimenssion" class="form-label"></label>
+                        <input type="text" asp-for="machinedimenssion" class="form-control">
+                        <span asp-validation-for="machinedimenssion"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="shippingweight" class="form-label"></label>
+                        <input type="text" asp-for="shippingweight" class="form-control">
+                        <span asp-validation-for="shippingweight"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="CapsuleImage" class=" form-label"></label>
+                        <input type="file" asp-for="CapsuleImage" name="capsuleImage" class="form-control">
+                        <span asp-validation-for="CapsuleImage"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Capsule</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

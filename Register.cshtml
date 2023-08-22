@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    Layout = "_layout";
+}
+
+@model AdminRegisterRequest
+
+<form method="post">
+    <div class="row mb-3">
+       <div class="col-sm-12 mb-3">
+           <label asp-for="Email"></label>
+           <input asp-for="Email" class="form-control" />
+           <span asp-validation-for="Email"></span>
+       </div>
+       <div class="col-sm-12 mb-3">
+           <label asp-for="Password"></label>
+           <input asp-for="Password" class="form-control" />
+           <span asp-validation-for="Password"></span>
+       </div>
+       <div class="col-sm-12 mb-3 ">
+           <label asp-for="ConfirmPassword"></label>
+           <input asp-for="ConfirmPassword" class="form-control" />
+           <span asp-validation-for="ConfirmPassword"></span>
+       </div>
+     
+
+        <div class="col-sm-12">
+          <button class="btn btn-success">Register</button>
+       </div>
+    </div>
+</form>
+
+

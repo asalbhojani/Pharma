@@ -1,0 +1,91 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    Layout = "_Layout";
+}
+@model Tablet
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Add Tablet</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+
+                     <div class="mb-3">
+                        <label asp-for="machinename" class="form-label"></label>
+                        <input type="text" asp-for="machinename" class="form-control">
+                        <span asp-validation-for="machinename"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="modelnumber" class="form-label"></label>
+                        <input type="text" asp-for="modelnumber" class="form-control">
+                        <span asp-validation-for="modelnumber"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="dice" class="form-label"></label>
+                        <input type="text" asp-for="dice" class="form-control">
+                        <span asp-validation-for="dice"></span>
+                    </div>
+
+                   <div class="mb-3">
+                        <label asp-for="maxpressure" class="form-label"></label>
+                        <input type="text" asp-for="maxpressure" class="form-control">
+                        <span asp-validation-for="maxpressure"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="maxdiameteroftablet" class="form-label"></label>
+                        <input type="text" asp-for="maxdiameteroftablet" class="form-control">
+                        <span asp-validation-for="maxdiameteroftablet"></span>
+                    </div>
+
+                     <div class="mb-3">
+                        <label asp-for="Maxdepthoffill" class=" form-label"></label>
+                        <input type="text" asp-for="Maxdepthoffill" class="form-control">
+                        <span asp-validation-for="Maxdepthoffill"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="productioncapacity" class="form-label"></label>
+                        <input type="text" asp-for="productioncapacity" class="form-control">
+                        <span asp-validation-for="productioncapacity"></span>
+                    </div>
+
+                   <div class="mb-3">
+                        <label asp-for="machinesize" class="form-label"></label>
+                        <input type="text" asp-for="machinesize" class="form-control">
+                        <span asp-validation-for="machinesize"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="machineweight" class="form-label"></label>
+                        <input type="text" asp-for="machineweight" class="form-control">
+                        <span asp-validation-for="machineweight"></span>
+                    </div>
+
+                     <div class="mb-3">
+                        <label asp-for="NetWeight" class="form-label"></label>
+                        <input type="text" asp-for="NetWeight" class="form-control">
+                        <span asp-validation-for="NetWeight"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="TabletImage" class="form-label"></label>
+                        <input type="file" asp-for="TabletImage" class="form-control">
+                        <span asp-validation-for="TabletImage"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Tablet</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
